@@ -1,0 +1,33 @@
+<ion-view title='EYE GO' hide-back-button="true">
+    <ion-nav-buttons>
+        <button class="button button-clear button-icon ion-person" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <img src="images/07.png" style="height: 28px;vertical-align: middle;margin-right: 5px"><span>GO</span>
+    </ion-nav-title>
+    <ion-content>
+        <ion-slide-box class="box" does-continue="true" auto-play="true" slide-interval="3500" show-pager="true"
+                       on-slide-changed="slideChange(index)" pager-click="pagerClick(index)" active-slide="data.page">
+            <ion-slide><div><img src="images/11.jpg"></div></ion-slide>
+            <ion-slide><div><img src="images/22.jpg"></div></ion-slide>
+            <ion-slide><div><img src="images/33.jpg"></div></ion-slide>
+            <ion-slide><div><img src="images/44.jpg"></div></ion-slide>
+            <ion-slide><div><img src="images/55.jpg"></div></ion-slide>
+        </ion-slide-box>
+        <ion-list>
+            <ion-item class="item-icon-left" ng-click="go('tabs.reservation')" style="border: 0;">
+                <i class="icon ion-android-boat calm"></i><div class="button button-outline button-calm">Famous Place</div>
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="go('tabs.restaurant')" style="border: 0;">
+                <i class="icon ion-android-map calm"></i><div class="button button-outline button-calm">World Top 20</div>
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="go('tabs.weather')" style="border: 0;">
+                <i class="icon ion-ios-sunny calm"></i><div class="button button-outline button-calm">Own Weather</div>
+            </ion-item>
+            <ion-item class="item-icon-left" ng-click="go('tabs.plain')" style="border: 0;">
+                <i class="icon ion-social-freebsd-devil calm"></i><div class="button button-outline button-calm">Afraid to fly, just stay at home.</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+

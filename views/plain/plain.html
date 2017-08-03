@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true">
+    <ion-content overflow-scroll="true" style="overflow: hidden;background: #c4c9ca;top: 0;">
+    <div id="startdiv">
+        <p class="icon ion-plane" style="font-size: 3em;display: table;margin: 50px auto;">Hit planes</p>
+        <button ng-click="begin(20)">NORMAL</button>
+        <button ng-click="begin(10)">HARD</button>
+        <button ng-click="begin(5)">INFERNAL</button>
+    </div>
+    <div id="maindiv">
+        <div id="scorediv">
+            <label>分数：</label>
+            <label id="label">0</label>
+        </div>
+        <div id="suspenddiv">
+            <button>继续</button>
+        </div>
+        <div id="enddiv">
+            <p class="plantext">飞机大战分数</p>
+            <p id="planscore">0</p>
+            <div><button ng-click="go('tabs.home')">回到主页</button></div>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

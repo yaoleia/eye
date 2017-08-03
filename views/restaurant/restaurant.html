@@ -1,0 +1,17 @@
+<ion-view>
+    <ion-nav-title ng-click="toTop()">
+        <i class="icon ion-ribbon-b" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+        <span style="height: 38px;line-height: 38px;display: inline-block"> World Top 20</span>
+    </ion-nav-title>
+    <ion-content>
+        <div class="list card" ng-repeat="place in places">
+            <div class="item item-image">
+                <img ng-src="{{place.imgsrc}}"/>
+            </div>
+            <div class="item" ng-click="flag=!flag" ng-class="flag?'item-text-wrap':''">
+                <h2>第{{place.nth}}位 , {{place.name}}</h2>
+                <p>{{place.desc}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

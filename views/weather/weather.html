@@ -1,0 +1,23 @@
+<ion-view style="background: #e7e7e5;overflow: hidden" overflow-scroll="true">
+    <ion-nav-title>
+        <i class="icon ion-ios-partlysunny" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+        <span style="height: 38px;line-height: 38px;display: inline-block"> Weather</span>
+    </ion-nav-title>
+    <ion-content>
+        <div class="today">
+            <div style="display: table;margin: 30px auto 10px">
+            <input type="text" style="padding:10px;width: 100px;display: inline-block;border: 2px solid #11c1f3;border-right: none;" ng-model="city" placeholder="北京">
+            <input type="button" style="vertical-align: middle;background: #11c1f3;border: none;display: inline-block;height: 34px;color: #fff;margin-left: -4px;padding: 0 5px;" ng-click="changecity(city)" value="更改城市">
+            </div>
+            <div class="city">{{weather.data.city}}</div>
+            <div class="week"><span>今天</span>{{weather.data.forecast[0].date}}</div>
+            <div class="rain"></div>
+            <div class="temp"><span style="font-size: 30px;float: left;margin-right: 40px;">{{weather.data.wendu}}</span>{{weather.data.forecast[0].type}}<span>℃</span></div>
+            <div class="h_l">{{weather.data.forecast[0].high}}<span>{{weather.data.forecast[0].low}}</span></div>
+            <div class="wind">{{weather.data.forecast[0].fengli}}<span>{{weather.data.forecast[0].fengxiang}}</span></div>
+            <div class="aqi">空气质量指数aqi：{{weather.data.aqi}}</div>
+            <div class="flu padding" style="line-height: 30px;font-size: 15px;">感冒指数：{{weather.data.ganmao}}</div>
+        </div>
+    </ion-content>
+</ion-view>
+

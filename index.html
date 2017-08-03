@@ -1,1 +1,67 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Notes | coligo.io</title><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css><link href=./static/css/app.20379bf7b06d187898f9f2916c7427b8.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.9a3cf17a90f6202cb523.js></script><script type=text/javascript src=./static/js/vendor.041733af802d6f4260e9.js></script><script type=text/javascript src=./static/js/app.b1ac293a5de4e3c668e6.js></script></body></html>
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Title</title>
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="views/tour/tour.js"></script>
+    <script src="views/login/login.js"></script>
+    <script src="views/signup/signup.js"></script>
+    <script src="views/eye/eye.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/reservation/reservation.js"></script>
+    <script src="views/restaurant/restaurant.js"></script>
+    <script src="views/weather/weather.js"></script>
+    <script src="views/plain/plain.js"></script>
+    <script src="views/detail/detail.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=UgdEOqT7frE7IjSmWg9ooh8AmZjawTaq"></script>
+    <script src="views/search/search.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+<ion-side-menus>
+    <ion-side-menu-content on-drag="toggleLeftSideMenu()">
+        <ion-nav-bar class="bar-calm">
+            <ion-nav-back-button class="button button-icon ion-ios-arrow-left button-clear"></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" width="240">
+        <ion-header-bar class="bar-calm">
+            <h1 class="title">ME</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list" style="border: 0">
+                <div class="item item-icon-left item-avatar" ui-sref="#" menu-close style="border: 0;">
+                    <img src="images/01.jpg" style="top: 30px;">
+                    <button ng-click="go('login')" class="button button-calm item-button-right button-full" style="border-radius: 22px;">
+                        <span style="font-weight: bolder">LOGIN</span>
+                    </button>
+                </div>
+                <div class="item" style="border: 0;padding:0 5px;">
+                    <button class="button icon-left ion-aperture button-calm button-full" style="border-radius: 22px;padding:0 30px">帖子 0</button>
+                </div>
+                <div class="item" style="border: 0;padding:0 5px;">
+                    <button class="button icon-left ion-ios-people button-calm button-full" style="border-radius: 22px;padding:0 30px">关注者 0</button>
+                </div>
+                <div class="item" style="border: 0;padding:0 5px;">
+                    <button class="button icon-left ion-android-people button-calm button-full" style="border-radius: 22px;padding:0 30px">关注 0</button>
+                </div>
+                <div class="row item" style="border: 0;font-size: 2em;">
+                    <div class="button col icon ion-android-apps calm"></div>
+                    <div class="button col icon ion-android-menu calm"></div>
+                    <div class="button col icon ion-android-pin calm"></div>
+                    <div class="button col icon ion-ios-cog calm"></div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu>
+
+</ion-side-menus>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<ion-view class="animated2 bounceInUp2">
+    <ion-nav-title ng-click="toTop()">
+        <i class="icon ion-image" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+        <span style="height: 38px;line-height: 38px;display: inline-block"> Photo</span>
+    </ion-nav-title>
+    <ion-content>
+        <div style="position: relative;padding: 20px 0 20px 70px;">
+            <div style="position:absolute;left: 0px;top: -5px;" class="item-avatar">
+                <img ng-src="{{text.imgsrc}}" style="width: 100%;">
+            </div>
+            <div>
+                <span style="font-size: 14px;font-weight: 500;">{{text.name}}</span>
+            </div>
+            <div style="font-size: 10px;color: #8f8f8f;position:absolute;right: 10px;top: 20px;">{{text.date|date:"yyyy-MM-dd HH:mm:ss"}}</div>
+        </div>
+        <div style="width: 100%">
+            <img ng-src="{{text.images}}" style="width: 100%;">
+        </div>
+        <div style="font-size: 2em;padding-top: 5px;">
+            <i class="padding ion-chatbubble-working calm" ng-click="text.flag=!text.flag;" ng-class="text.flag?'energized':'calm'"></i>
+            <i class="padding ion-android-share-alt calm" ng-click="openModal();" ng-class="text.flag2?'energized':'calm'"></i>
+            <i ng-class="text.changecolor" ng-click="ding(text)" ng-init="text.dsa" class="padding ion-android-favorite calm"></i>
+            <div class="button button-clear button-stable item-button-right" style="float: right;line-height: 20px">
+                <i class="icon ion-ios-more calm"></i>
+            </div>
+        </div>
+        <div style="width: 200px;" class="padding">
+            <i class="icon ion-android-chat" style="font-size: 1.2em;vertical-align: middle;margin-right: 2px;color: #a2a2a2"></i><span style="font-size: 10px;margin-right: 10px"><em style="padding: 3px;">{{text.comments.length}}</em>Comments</span>
+            <i class="icon ion-android-favorite" style="font-size: 1.2em;vertical-align: middle;margin-right: 2px;color: #a2a2a2"></i><span style="font-size: 10px;"><em style="padding: 3px;">{{text.like}}</em>Likes</span>
+        </div>
+        <form style="width: 100%" ng-if="text.flag">
+            <textarea style="border: 2px solid #11c1f3;width: 100%;resize: none;height: 80px;border-radius: 5px;padding: 5px;" ng-model="newc"></textarea>
+            <button type="submit" class="button button-full button-balanced button-outline" ng-click="newcomment(newc);newc=''">send</button>
+        </form>
+        <ul ng-repeat="com in text.comments" style="padding: 5px;">
+           <li style="border-bottom: 1px solid #11c1f3;">
+               <p style="margin: 0"><strong>{{com.name}} </strong>“{{com.main}}”</p>
+               <p style="font-size: 10px;color: #3f51b5;text-align: right;margin: 0;">{{com.date|date:'yyyy-MM-dd HH:mm:ss'}}</p>
+           </li>
+        </ul>
+        <!--内联模板-->
+        <script id="views/modal.html" type="text/ng-template">
+            <ion-modal-view style="border: 2px solid #33cd5f;border-radius: 5px;" class="detailmodal">
+                <ion-header-bar class="bar bar-header bar-balanced">
+                    <ion-title>
+                        <i class="icon ion-aperture"></i>分享到
+                    </ion-title>
+                    <button class="button button-clear button-primary icon ion-android-close" ng-click="closeModal();"></button>
+                </ion-header-bar>
+                <ion-content class="padding">
+                    <div style="width: 100%">
+                        <img ng-src="{{text.images}}" style="width: 100%;">
+                    </div>
+                    <div class="button-bar">
+                        <button class="button icon ion-social-twitter button-balanced" style="border: 1px solid #fff"></button>
+                        <button class="button icon ion-social-facebook button-balanced" style="border: 1px solid #fff"></button>
+                        <button class="button icon ion-social-tumblr button-balanced" style="border: 1px solid #fff"></button>
+                    </div>
+                    <div class="button-bar">
+                        <buttona class="button icon ion-social-octocat button-balanced" style="border: 1px solid #fff"></buttona>
+                        <button class="button icon ion-social-vimeo button-balanced" style="border: 1px solid #fff"></button>
+                        <button class="button icon ion-social-googleplus button-balanced" style="border: 1px solid #fff"></button>
+                    </div>
+                </ion-content>
+            </ion-modal-view>
+        </script>
+    </ion-content>
+</ion-view>

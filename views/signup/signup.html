@@ -1,0 +1,35 @@
+<ion-view class="energized-bg">
+    <ion-nav-bar class="bar-energized">
+        <ion-nav-back-button class="button button-icon ion-ios-arrow-left button-clear"></ion-nav-back-button>
+        <ion-nav-title>
+            <img src="images/07.png" style="height: 30px;vertical-align: middle;">
+        </ion-nav-title>
+        <ion-nav-buttons side="right">
+            <a class="button button-clear" ui-sref="login">
+                <i class="icon ion-person"></i>
+                LOGIN
+            </a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <div class="list has-header">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Username</span>
+            <input type="text" placeholder="John" style="width: 90%;padding: 0 5px;">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Password</span>
+            <input type="password" placeholder="000000" style="width: 90%;padding: 0 5px;">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="john@163.com" style="width: 90%;padding: 0 5px;">
+        </label>
+    </div>
+    <div class="logob" style="top: 50%;opacity: 0.9;">
+        <button ng-click="go('home')" class="button button-balanced item-button-right button-full" style="border-radius: 22px;">
+            <span class="padding" style="font-weight: bolder">SIGNUP</span>
+        </button>
+        <button ng-click="go('tabs.eye')" class="button button-outline button-balanced button-full" style="font-weight: bolder;color: #fff;line-height: 40px;">TAKE A QUICK TOUR
+        </button>
+    </div>
+</ion-view>

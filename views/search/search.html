@@ -1,0 +1,43 @@
+<ion-view>
+        <ion-nav-title ng-click="toTop()">
+            <i class="icon ion-android-map" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+            <span style="height: 38px;line-height: 38px;display: inline-block"> Map</span>
+        </ion-nav-title>
+        <ion-nav-buttons side="right">
+            <a class="button button-clear" ng-click="openModal();">
+                <i class="icon ion-android-bulb"></i>
+                查找周边
+            </a>
+        </ion-nav-buttons>
+
+    <ion-content style="width: 100%;height: 100%" overflow-scroll="true">
+        <div id="allmap"></div>
+
+        <script id="search/modal.html" type="text/ng-template">
+            <ion-modal-view class="searchmodal">
+                <ion-header-bar class="bar bar-header bar-balanced">
+                    <ion-title>
+                        <i class="icon ion-ios-search" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+                        <span style="height: 38px;line-height: 38px;display: inline-block"> Search</span>
+                    </ion-title>
+                    <button class="button button-clear button-primary icon ion-android-close" ng-click="closeModal();"></button>
+                </ion-header-bar>
+                <ion-content>
+                    <input class="button button-full" style="width: 100%;" type="search" ng-model="place" required="true" placeholder="请输入地点:如 西直门">
+                    <input id="zb" class="button button-full" style="width: 100%;" type="search" ng-model="zhoubian" placeholder="其它周边">
+                    <div class="button-bar">
+                        <button ng-click="getzb('美食')" class="button icon ion-android-restaurant button-balanced" style="border: 1px solid #fff"> 美食</button>
+                        <button ng-click="getzb('医院')" class="button icon ion-ios-pulse-strong button-balanced" style="border: 1px solid #fff"> 医院</button>
+                        <button ng-click="getzb('公交站')" class="button icon ion-android-bus button-balanced" style="border: 1px solid #fff"> 公交站</button>
+                    </div>
+                    <div class="button-bar">
+                        <buttona ng-click="getzb('电影院')" class="button icon ion-ios-film button-balanced" style="border: 1px solid #fff"> 电影院</buttona>
+                        <button ng-click="getzb('超市')" class="button icon ion-android-cart button-balanced" style="border: 1px solid #fff"> 超市</button>
+                        <button ng-click="getzb('银行')" class="button icon ion-card button-balanced" style="border: 1px solid #fff"> 银行</button>
+                    </div>
+                    <input type="submit" ng-click="getpz(place)" value="点击查找" class="button button-full button-balanced" style="width: 100%;font-size: 1.5em;color: #fff;">
+                </ion-content>
+            </ion-modal-view>
+        </script>
+    </ion-content>
+</ion-view>

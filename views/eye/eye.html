@@ -1,0 +1,38 @@
+<ion-view>
+    <ion-nav-buttons>
+        <button class="button button-clear button-icon ion-person" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title ng-click="toTop()">
+        <img src="images/07.png" style="height: 28px;vertical-align: middle;margin-right: 5px"><span>EYE</span>
+    </ion-nav-title>
+    <div style="width: 55px;height: 100%;position: absolute;right: 0;top: 0;z-index: -1;" class="stable-bg"></div>
+    <ion-content>
+        <ion-refresher pulling-text="刷新" pulling-icon="icon  ion-refresh calm" on-pulling="onRefresh()"></ion-refresher>
+        <ul>
+            <li style="min-height: 70px;" ng-repeat="information in informations">
+               <div style="position: relative;margin: 10px 60px 15px 60px;">
+                   <div style="width: 40px;height: 40px;position:absolute;left: -50px;top: 5px; "><img ng-src="{{information.imgsrc}}" style="width: 100%;border-radius: 5px;"></div>
+                   <div style="position: relative"><span style="font-size: 14px;font-weight: 500;">{{information.name}}</span><div style="font-size: 10px;color: #8f8f8f;position: absolute;top: 1px;right: -8px;transform: scaleX(0.8);letter-spacing: 1px;">{{information.date | date:medium}}</div><br>
+                       <span style="font-size: 13px;padding: 6px;border: 0" class="item" ng-click="flag=!flag" ng-class="flag?'item-text-wrap':''">{{information.main}}</span>
+                   </div>
+                    <div style="width: 200px;"><i class="icon ion-android-chat" style="font-size: 1.2em;vertical-align: middle;margin-right: 2px;color: #a2a2a2"></i><span style="font-size: 10px;"><em style="padding: 3px;">{{information.comments.length}}</em>Comments</span>
+                        <i class="icon ion-android-favorite" style="font-size: 1.2em;vertical-align: middle;margin-right: 2px;color: #a2a2a2"></i><span style="font-size: 10px;"><em style="padding: 3px;">{{information.like}}</em>Likes</span>
+                    </div>
+                    <div style="width: 55px;height: 100%;position: absolute;right: -60px;top: 0;">
+                        <button style="width: 100%;background: none;border: none;" ui-sref="tabs.detail" ng-click="getinfo(information)">
+                            <i class="icon ion-android-chat calm" style="font-size: 2em;"></i>
+                        </button>
+                        <button style="width: 100%;background: none;border: none;" ng-click="ding(information)" ng-init="information.dsa">
+                            <i class="icon ion-android-favorite calm" style="font-size: 2em;" ng-class="information.changecolor"></i>
+                        </button>
+                    </div>
+               </div>
+                <div style="width: 100%" ui-sref="tabs.detail" ng-click="getinfo(information)">
+                    <img ng-src="{{information.images}}" style="width: 100%;">
+                </div>
+
+            </li>
+            <ion-infinite-scroll distance="1%" on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+        </ul>
+    </ion-content>
+</ion-view>
