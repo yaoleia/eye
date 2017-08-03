@@ -1,5 +1,5 @@
 ## Welcome to GitHub Pages
-https://yaoleia.github.io/eye/
+https://yaoleia.github.io/eye_go/
 
 You can use the [editor on GitHub](https://github.com/yaoleia/eye/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
