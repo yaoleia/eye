@@ -97,7 +97,7 @@ myapp.controller("plainCtrl",function($scope){
      创建单行子弹类
      */
     $scope.oddbullet=function (X,Y){
-        $scope.bullet.call(this,X,Y,55,80,"images/bullet1.png");
+        $scope.bullet.call(this,X,Y,55,80,"http://omjbzg6gs.bkt.clouddn.com/eyego/bullet1.png");
     }
 
     /*
@@ -115,8 +115,8 @@ myapp.controller("plainCtrl",function($scope){
      创建本方飞机类
      */
     $scope.ourplan=function (X,Y){
-        var imagesrc="images/my_plain.gif";
-        $scope.plan.call(this,1,X,Y,66,80,0,660,0,"images/my_boom.gif",imagesrc);
+        var imagesrc="http://omjbzg6gs.bkt.clouddn.com/eyego/my_plain.gif";
+        $scope.plan.call(this,1,X,Y,66,80,0,660,0,"http://omjbzg6gs.bkt.clouddn.com/eyego/my_boom.gif",imagesrc);
         this.imagenode.setAttribute('id','ourplan');
     }
 
@@ -209,16 +209,16 @@ myapp.controller("plainCtrl",function($scope){
             mark1++;
             //中飞机
             if(mark1%4==0){
-                enemys.push(new $scope.enemy(6,1,380,46,60,5000,360,$scope.random(1,4),"images/mid_boom.gif","images/enemy3_fly_1.png"));
+                enemys.push(new $scope.enemy(6,1,380,46,60,5000,360,$scope.random(1,4),"http://omjbzg6gs.bkt.clouddn.com/eyego/mid_boom.gif","http://omjbzg6gs.bkt.clouddn.com/eyego/enemy3_fly_1.png"));
             }
             //大飞机
             if(mark1%10==0){
-                enemys.push(new $scope.enemy(12,1,350,110,164,30000,540,$scope.random(1,3),"images/big_boom.gif","images/enemy2_fly_1.png"));
+                enemys.push(new $scope.enemy(12,1,350,110,164,30000,540,$scope.random(1,3),"http://omjbzg6gs.bkt.clouddn.com/eyego/big_boom.gif","http://omjbzg6gs.bkt.clouddn.com/eyego/enemy2_fly_1.png"));
                 mark1=0;
             }
             //小飞机
             else{
-                enemys.push(new $scope.enemy(1,1,390,34,24,1000,360,$scope.random(2,4),"images/sma_boom.gif","images/enemy1_fly_1.png"));
+                enemys.push(new $scope.enemy(1,1,390,34,24,1000,360,$scope.random(2,4),"http://omjbzg6gs.bkt.clouddn.com/eyego/sma_boom.gif","http://omjbzg6gs.bkt.clouddn.com/eyego/enemy1_fly_1.png"));
             }
             mark=0;
         }
@@ -280,7 +280,7 @@ myapp.controller("plainCtrl",function($scope){
                     if(enemys[j].imagenode.offsetLeft+enemys[j].plansizeX>=$scope.selfplan.imagenode.offsetLeft&&enemys[j].imagenode.offsetLeft<=$scope.selfplan.imagenode.offsetLeft+$scope.selfplan.plansizeX){
                         if(enemys[j].imagenode.offsetTop+enemys[j].plansizeY>=$scope.selfplan.imagenode.offsetTop+40&&enemys[j].imagenode.offsetTop<=$scope.selfplan.imagenode.offsetTop-20+$scope.selfplan.plansizeY){
                             //碰撞本方飞机，游戏结束，统计分数
-                            $scope.selfplan.imagenode.src="images/my_boom.gif";
+                            $scope.selfplan.imagenode.src="http://omjbzg6gs.bkt.clouddn.com/eyego/my_boom.gif";
                             enddiv.style.display="block";
                             planscore.innerHTML=scores;
                             if(document.removeEventListener){

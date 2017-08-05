@@ -101,16 +101,16 @@
 	 <!--下面是每个场景的循环：-->
 	 <!--name：热点跳转的标志，title：显示的文字，thumburl：缩略图，hlookat+vlookat：初始的视角，maxpixelzoom：放大最大倍数，fovmin+fovmax：最大旋转角度，
 	 preview：预览图，ath+atv：热点坐标，linkedscene：热点指向的场景。-->
-	<scene name="scene_A1" title="外景" thumburl="panos/A1.tiles/thumb.jpg">
+	<scene name="scene_A1" title="外景" thumburl="http://omjbzg6gs.bkt.clouddn.com/panos/A1.tiles/thumb.jpg">
 
 		<view hlookat="-250.484" vlookat="55.362" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/A1.tiles/preview.jpg" />
+		<preview url="http://omjbzg6gs.bkt.clouddn.com/panos/A1.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/A1.tiles/pano_%s.jpg" />
+			<cube url="http://omjbzg6gs.bkt.clouddn.com/panos/A1.tiles/pano_%s.jpg" />
 
-			<cube url="panos/A1.tiles/mobile/pano_%s.jpg" devices="mobile" />
+			<!--<cube url="panos/A1.tiles/mobile/pano_%s.jpg" devices="mobile" />-->
 		</image>
 
 		<!-- place your scene hotspots here -->
@@ -118,16 +118,14 @@
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="161.882" atv="66.698" distorted="false" zoom="false" linkedscene="scene_d3" />
 	</scene>
 
-	<scene name="scene_A2" title="卧室1" onstart="" thumburl="panos/A2.tiles/thumb.jpg">
+	<scene name="scene_A2" title="卧室1" onstart="" thumburl="http://omjbzg6gs.bkt.clouddn.com/panos/A2.tiles/thumb.jpg">
 
 		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/A2.tiles/preview.jpg" />
+		<preview url="http://omjbzg6gs.bkt.clouddn.com/panos/A2.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/A2.tiles/pano_%s.jpg" />
-
-			<cube url="panos/A2.tiles/mobile/pano_%s.jpg" devices="mobile" />
+			<cube url="http://omjbzg6gs.bkt.clouddn.com/panos/A2.tiles/pano_%s.jpg" />
 		</image>
 
 		<!-- place your scene hotspots here -->
@@ -136,16 +134,15 @@
 	</scene>
 
 
-	<scene name="scene_D3" title="儿童房" onstart="" thumburl="panos/D3.tiles/thumb.jpg">
+	<scene name="scene_D3" title="儿童房" onstart="" thumburl="http://omjbzg6gs.bkt.clouddn.com/panos/D3.tiles/thumb.jpg">
 
 		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/D3.tiles/preview.jpg" />
+		<preview url="http://omjbzg6gs.bkt.clouddn.com/panos/D3.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/D3.tiles/pano_%s.jpg" />
+			<cube url="http://omjbzg6gs.bkt.clouddn.com/panos/D3.tiles/pano_%s.jpg" />
 
-			<cube url="panos/D3.tiles/mobile/pano_%s.jpg" devices="mobile" />
 		</image>
 
 		<!-- place your scene hotspots here -->
