@@ -32,6 +32,7 @@
                 </div>
 
             </li>
+            <div ng-show="ajaxNumber==0" style="position: absolute;bottom:0;text-align: center;line-height: 80px; color: #555;width: 100%;">没有更多了</div>
             <ion-infinite-scroll distance="1%" on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
         </ul>
     </ion-content>

@@ -20,7 +20,8 @@ myapp.config(function($stateProvider,$urlRouterProvider){
     $stateProvider.state("tabs",{
         url:"/tabs",
         abstract:true,      // 抽象的，也就是不能具体化，不能显示
-        templateUrl:"views/tabs/tabs.html"
+        templateUrl:"views/tabs/tabs.html",
+        controller:"tabsCtrl"
     });
 
     $stateProvider.state("tabs.eye",{
@@ -129,20 +130,27 @@ myapp.controller("myCtrl",function($scope,$state,$ionicSideMenuDelegate,$ionicSc
         document.body.style.display="block";
     });
 //----------------------------------------------------------------------------------------------
+	$scope.ajaxNumber = 3;
     $scope.detailnum=0;
     $scope.informations=data;
     $scope.onRefresh=function(){
         $http.get("data/informations.json")
             .success(function(data){
                 $scope.informations=data;
+                $scope.ajaxNumber = 3
             })
             .finally(function(){
                 $scope.$broadcast("scroll.refreshComplete");
             });
     };
     $scope.loadMore=function(){
+    	if($scope.ajaxNumber <= 0) {
+    		$scope.$broadcast("scroll.infiniteScrollComplete");
+    		return;
+    	};
         $http.get("data/informations.json")
             .success(function(data){
+            	$scope.ajaxNumber--;
                 Array.prototype.push.apply($scope.informations,data)
             })
             .finally(function(){

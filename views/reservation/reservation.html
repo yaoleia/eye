@@ -3,7 +3,7 @@
         <i class="icon ion-earth" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
         <span style="height: 38px;line-height: 38px;display: inline-block"> Place</span>
     </ion-nav-title>
-    <ion-content class="has-tabs">
+    <ion-content>
         <div ng-repeat-start="team in teams"></div>
         <div class="row" style="padding: 0;width: 100%;margin: 0">
             <div ng-repeat="player in team.players" class="col card" style="overflow: hidden;margin: 0;"><p style="height: 30px;font-size: 12px;">{{player.username}}</p><div style="height: 120px"><img ng-src="{{player.imgsrc}}" style="width: 100%;height: 100%"></div></div>
