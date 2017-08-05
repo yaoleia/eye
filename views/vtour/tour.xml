@@ -115,8 +115,6 @@
 
 		<!-- place your scene hotspots here -->
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="86.630" atv="43.725" distorted="false" zoom="false" linkedscene="scene_a2"/>
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="58.726" atv="34.283" distorted="false" zoom="false" linkedscene="scene_a3" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="11.547" atv="37.621" distorted="false" zoom="false" linkedscene="scene_a3" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="161.882" atv="66.698" distorted="false" zoom="false" linkedscene="scene_d3" />
 	</scene>
 
@@ -137,22 +135,6 @@
 
 	</scene>
 
-	<scene name="scene_A3" title="卧室2" onstart="" thumburl="panos/A3.tiles/thumb.jpg">
-
-		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/A3.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/A3.tiles/pano_%s.jpg" />
-
-			<cube url="panos/A3.tiles/mobile/pano_%s.jpg" devices="mobile" />
-		</image>
-
-		<!-- place your scene hotspots here -->
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-126.271" atv="14.119" distorted="false" zoom="false" linkedscene="scene_a1" />
-
-	</scene>
 
 	<scene name="scene_D3" title="儿童房" onstart="" thumburl="panos/D3.tiles/thumb.jpg">
 
@@ -167,24 +149,9 @@
 		</image>
 
 		<!-- place your scene hotspots here -->
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-149.594" atv="-1.784" distorted="false" zoom="false" linkedscene="scene_d4" />
+
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="112.642" atv="3.874" distorted="false" zoom="false" linkedscene="scene_a1" />
 
 	</scene>
 
-	<scene name="scene_D4" title="厕所" onstart="" thumburl="panos/D4.tiles/thumb.jpg">
-
-		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/D4.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/D4.tiles/pano_%s.jpg" />
-
-			<cube url="panos/D4.tiles/mobile/pano_%s.jpg" devices="mobile" />
-		</image>
-
-		<!-- place your scene hotspots here -->
-
-	</scene>
 </krpano>
