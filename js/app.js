@@ -9,6 +9,7 @@ var data=[
     {"imgsrc":"http://omjbzg6gs.bkt.clouddn.com/eyego/t6.jpg","like":6,"comments":[],"name":"Dog","date":"2016-09-11 18:59:40","main":"As a mixing room worker, he works with remarkable achievements and gets good praise from his monitor often.","images":"http://omjbzg6gs.bkt.clouddn.com/eyego/2929.jpg"},
     {"imgsrc":"http://omjbzg6gs.bkt.clouddn.com/eyego/t8.jpg","like":44,"comments":[],"name":"Tom","date":"2016-09-11 18:59:40","main":"Move aside Shanghai Tower, there's a new big boy in the town. Shenzhen, China's southern city neighboring Hong Kong","images":"http://omjbzg6gs.bkt.clouddn.com/eyego/3030.jpg"}
 ];
+
 myapp.config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise("/tour");
     $stateProvider.state("tour",{

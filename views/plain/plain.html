@@ -1,5 +1,9 @@
-<ion-view hide-nav-bar="true">
-    <ion-content overflow-scroll="true" style="overflow: hidden;background: #c4c9ca;top: 0;">
+<ion-view hide-tabs="true">
+	<ion-nav-title ng-click="toTop()">
+        <i class="icon ion-plane" style="font-size: 1.5em;vertical-align: top;display: inline-block;"></i>
+        <span style="height: 38px;line-height: 38px;display: inline-block">plain</span>
+    </ion-nav-title>
+    <ion-content overflow-scroll="true" style="overflow: hidden;background: #c4c9ca;">
     <div id="startdiv">
         <p class="icon ion-plane" style="font-size: 3em;display: table;margin: 50px auto;">Hit planes</p>
         <button ng-click="begin(20)">NORMAL</button>

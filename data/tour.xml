@@ -1,8 +1,8 @@
 ﻿<krpano version="1.19" title="星河新房">
 	<!--皮肤样式-->
-	<include url="http://omjbzg6gs.bkt.clouddn.com/krpano/skin/vtourskin.xml" />
+	<include url="skin/vtourskin.xml" />
 	<!--加载进度-->
-	<include url="http://omjbzg6gs.bkt.clouddn.com/krpano/loadingpercenttext.xml" />
+	<include url="loadingpercenttext.xml" />
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
 	               maps_type=""
@@ -55,7 +55,7 @@
 	               design_text_shadow="1"
 	               />
 	<!--黑色主题-->
-	<include url="http://omjbzg6gs.bkt.clouddn.com/krpano/skin/vtourskin_design_black.xml" />
+	<include url="skin/vtourskin_design_black.xml" />
 
 	
 	<!-- startup action - load the first scene -->

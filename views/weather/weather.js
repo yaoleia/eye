@@ -4,7 +4,7 @@
 myapp.controller("weatherCtrl",function($scope,$http,$ionicLoading){
     $scope.changecity=function(city){
         $scope.cityac=city||"北京";
-        var url='http://wthrcdn.etouch.cn/weather_mini?city='+$scope.cityac;
+        var url='https://wthrcdn.etouch.cn/weather_mini?city='+$scope.cityac;
         $ionicLoading.show();
         $http.get(url).success(function(data){
             $scope.weather=data;

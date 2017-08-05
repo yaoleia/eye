@@ -1,4 +1,3 @@
-//获得主界面
 myapp.controller("plainCtrl",function($scope){
     var mainDiv=document.getElementById("maindiv");
 //获得开始界面

@@ -2,6 +2,7 @@
 .has-tabs-top {top: 44px;}
 .bar-header{top: 0;}
 .platform-android .bar .title {text-align: center;width: 100%;margin: 0;left: 0 !important;}
+.platform-android .pane[hide-nav-bar="true"] .has-tabs-top{top:0;}
 .tabs-top>.tabs{position: fixed;left: 0;bottom: 0;top:auto;}
 .box, .box img{width: 100%;}
 .logob{position: absolute;z-index: 10;top:15%;left: 0;right: 0;margin: auto;width: 80%;}
