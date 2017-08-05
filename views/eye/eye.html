@@ -8,7 +8,7 @@
     <div style="width: 55px;height: 100%;position: absolute;right: 0;top: 0;z-index: -1;" class="stable-bg"></div>
     <ion-content class="has-tabs">
         <ion-refresher pulling-text="刷新" pulling-icon="icon  ion-refresh calm" on-pulling="onRefresh()"></ion-refresher>
-        <ul>
+        <ul style="position: relative;">
             <li style="min-height: 70px;" ng-repeat="information in informations">
                <div style="position: relative;margin: 10px 60px 15px 60px;">
                    <div style="width: 40px;height: 40px;position:absolute;left: -50px;top: 5px; "><img ng-src="{{information.imgsrc}}" style="width: 100%;border-radius: 5px;"></div>
@@ -32,7 +32,7 @@
                 </div>
 
             </li>
-            <div ng-show="ajaxNumber==0" style="position: absolute;bottom:0;text-align: center;font-size: 16px;line-height: 60px; color: #555;width: 100%;">没有更多了</div>
+            <div ng-show="ajaxNumber==0" style="position: absolute;bottom:0;text-align: center;font-size: 16px;line-height: 60px; color: #555;width: 100%;">没有更多了...</div>
             <ion-infinite-scroll distance="1%" on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
         </ul>
     </ion-content>
