@@ -51,6 +51,13 @@ myapp.config(function($stateProvider,$urlRouterProvider){
             controller:"weatherCtrl"
         }}
     });
+    $stateProvider.state("tabs.vtour",{
+        url:"/vtour",
+        views:{"tab-go":{
+            templateUrl:"views/vtour/tour.html",
+            controller:"vtourCtrl"
+        }}
+    });
     $stateProvider.state("tabs.restaurant",{
         url:"/home",
         views:{"tab-go":{
