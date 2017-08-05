@@ -224,3 +224,6 @@ html{height: 100%;}
 #allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
 body{font-family: "微软雅黑"}
 .krpano .scroll{height: 100%;}
+.krpano *{
+	box-sizing: content-box;
+}
