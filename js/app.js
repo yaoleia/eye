@@ -10,26 +10,33 @@ var data=[
     {"imgsrc":"images/t8.jpg","like":44,"comments":[],"name":"Tom","date":"2016-09-11 18:59:40","main":"Move aside Shanghai Tower, there's a new big boy in the town. Shenzhen, China's southern city neighboring Hong Kong","images":"images/3030.jpg"}
 ];
 myapp.config(function($stateProvider,$urlRouterProvider){
+    $urlRouterProvider.otherwise("/tour");
     $stateProvider.state("tour",{
         url:"/tour",
         templateUrl:"views/tour/tour.html",
         controller:"tourCtrl"
-    });
-    $stateProvider.state("login",{
-        url:"/login",
-        templateUrl:"views/login/login.html",
-        controller:"loginCtrl"
-    });
-    $stateProvider.state("signup",{
-        url:"/signup",
-        templateUrl:"views/signup/signup.html",
-        controller:"signupCtrl"
     });
     $stateProvider.state("tabs",{
         url:"/tabs",
         abstract:true,      // 抽象的，也就是不能具体化，不能显示
         templateUrl:"views/tabs/tabs.html"
     });
+
+    $stateProvider.state("tabs.eye",{
+        url:"/eye",
+        views:{"tab-eye":{
+            templateUrl:"views/eye/eye.html",
+            controller:"eyeCtrl"
+        }}
+    });
+    $stateProvider.state("tabs.detail",{
+        url:"/detail?:info",
+        views:{"tab-eye":{
+            templateUrl:"views/detail/detail.html",
+            controller:"detailCtrl"
+        }}
+    });
+
     $stateProvider.state("tabs.home",{
         url:"/home",
         views:{"tab-go":{
@@ -72,26 +79,14 @@ myapp.config(function($stateProvider,$urlRouterProvider){
             controller:"plainCtrl"
         }}
     });
-    $stateProvider.state("tabs.eye",{
-        url:"/eye",
-        views:{"tab-eye":{
-            templateUrl:"views/eye/eye.html",
-            controller:"eyeCtrl"
-        }}
-    });
-    $stateProvider.state("tabs.detail",{
-        url:"/detail?:info",
-        views:{"tab-eye":{
-            templateUrl:"views/detail/detail.html",
-            controller:"detailCtrl"
-        }}
-    });
+
     $stateProvider.state("tabs.issued",{
         url:"/issued",
         views:{"tab-issued":{
             templateUrl:"views/issued/issued.html"
         }}
     });
+
     $stateProvider.state("tabs.search",{
         url:"/search",
         views:{"tab-search":{
@@ -99,7 +94,17 @@ myapp.config(function($stateProvider,$urlRouterProvider){
             controller:"searchCtrl"
         }}
     });
-    $urlRouterProvider.otherwise("/tour");
+
+    $stateProvider.state("login",{
+        url:"/login",
+        templateUrl:"views/login/login.html",
+        controller:"loginCtrl"
+    });
+    $stateProvider.state("signup",{
+        url:"/signup",
+        templateUrl:"views/signup/signup.html",
+        controller:"signupCtrl"
+    });
 });
 myapp.controller("myCtrl",function($scope,$state,$ionicSideMenuDelegate,$ionicScrollDelegate,$ionicViewSwitcher,$http){
     $scope.toggleLeftSideMenu = function() {                //拖拽不出侧边栏
@@ -118,6 +123,10 @@ myapp.controller("myCtrl",function($scope,$state,$ionicSideMenuDelegate,$ionicSc
         $scope.detailnum=$scope.informations.indexOf(item);
         $scope.text=$scope.informations[$scope.detailnum];
     };
+
+    $scope.$on("$ionicView.beforeEnter", function(){
+        document.body.style.display="block";
+    });
 //----------------------------------------------------------------------------------------------
     $scope.detailnum=0;
     $scope.informations=data;
