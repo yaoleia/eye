@@ -16,7 +16,7 @@ myapp.controller("weatherCtrl",function($scope,$http,$ionicLoading){
         }).error(function(){
             $ionicLoading.show({
                 template:"暂时无法获取",
-                duration:3000
+                duration:1000
             });
         });
     };
