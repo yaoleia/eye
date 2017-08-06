@@ -135,7 +135,7 @@ html{height: 100%;}
 .low_t span{font-size: 9px;}
 .forecast .w_type{background: #8ca8be;}
 .forecast .w_type img{height:40px; }
-
+.slide-img{width: 100%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
 
 .slide-in-right {
     -webkit-transform: translateX(100%);
